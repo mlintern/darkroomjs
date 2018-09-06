@@ -68,6 +68,7 @@
 ├── darkroom.js
 └── plugins
     ├── darkroom.crop.js
+    ├── darkroom.download.js
     ├── darkroom.history.js
     ├── darkroom.rotate.js
     └── darkroom.save.js</code></pre>
@@ -109,11 +110,6 @@
           </dd>
         </dl>
 
-        <!--
-        <h2>Interactive example</h2>
-        <p></p>
-        -->
-
         <h2>Contributing</h2>
 
         <p>
@@ -147,6 +143,15 @@
           // minHeight: 50,
           // minWidth: 50,
           //ratio: 4/3
+        },
+        save: {
+          callback: function () {
+            this.darkroom.selfDestroy(); // Cleanup
+            $('.darkroom-edited-image').click(function () {
+              console.log('here');
+              initDarkroom($(this));
+            });
+          }
         }
       },
 
@@ -161,7 +166,7 @@
   $(document).ready(function () {
     $('img').click(function () {
       initDarkroom($(this));
-    })
+    });
   });
   </script>
 </body>
