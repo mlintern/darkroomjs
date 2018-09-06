@@ -1,14 +1,14 @@
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: #f2f2f4;
   color: #555;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
 
 a {
-  text-decoration: none;
   color: #0099CC;
+  text-decoration: none;
 }
 
 figure {
@@ -16,14 +16,14 @@ figure {
 }
 
 .sr-only {
-  position: absolute;
-  width: 1px;
+  border: 0;
+  clip: rect(0,0,0,0);
   height: 1px;
-  padding: 0;
   margin: -1px;
   overflow: hidden;
-  clip: rect(0,0,0,0);
-  border: 0
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }
 
 .copy {
@@ -35,24 +35,24 @@ figure {
   line-height: 1.5;
 }
 
-.copy p.intro {
+.copy .intro {
   font-size: 1.8em;
-  line-height: 1.5;
   font-weight: 300;
+  line-height: 1.5;
 }
 
-.copy h2 {
+h2 {
   font-size: 2.5em;
   font-weight: 300;
 }
 
 .copy pre {
-  font-family: monospace;
   background: #fafafa;
-  padding: 10px 15px;
   border: 1px solid #e2e2e2;
   border-bottom: 1px solid #ccc;
   border-right: 1px solid #ccc;
+  font-family: monospace;
+  padding: 10px 15px;
 }
 
 .copy dt {
@@ -60,53 +60,49 @@ figure {
 }
 
 .container {
-  width: 700px;
   margin: auto;
+  width: 700px;
 }
 
-#header {
+.header {
   background: #222;
-  padding: 30px;
   min-width: 700px;
+  padding: 30px;
   position: relative;
 }
 
-#content {
+.content {
   margin: 20px 0 40px;
 }
 
 h1 {
+  color: #eee;
   font-size: 52px;
+  font-weight: 100;
   margin: 0;
   padding: 0;
-  font-weight: 100;
-  color: #eee;
 }
 
 .hero {
+  color: #ccc;
   font-size: 22px;
   font-weight: 100;
-  color: #ccc;
   margin: 0;
   padding: 0;
 }
 
-.figure-wrapper {
-  /*text-align: center;*/
-}
-
 .image-container {
-  display: inline-block;
-  max-width: 100%;
   background: white;
-  padding: 10px;
-  margin: 5px 0;
   border: 1px solid #e2e2e2;
   border-bottom: 1px solid #ccc;
   border-right: 1px solid #ccc;
+  display: inline-block;
+  margin: 5px 0;
+  max-width: 100%;
+  padding: 10px;
 }
 
-.image-container.target {
+.image-container {
   margin-top: 40px;
 }
 
@@ -115,13 +111,13 @@ h1 {
 }
 
 .image-container .image-meta {
-  margin-top: 10px;
   font-size: 12px;
+  margin-top: 10px;
   text-align: left;
 }
 .image-container .image-meta a {
-  text-decoration: none;
   color: #444;
+  text-decoration: none;
 }
 .image-container .image-meta a:hover .image-meta-title {
   text-decoration: underline;

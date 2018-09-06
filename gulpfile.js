@@ -1,15 +1,15 @@
-var concat = require('gulp-concat')
-var connect = require('gulp-connect')
-var gulp = require('gulp')
-var gutil = require('gulp-util')
-var inject = require('gulp-inject')
-var plumber = require('gulp-plumber')
-var rimraf = require('rimraf')
-var sass = require('gulp-sass')
-var sourcemaps = require('gulp-sourcemaps')
-var svgmin = require('gulp-svgmin')
-var svgstore = require('gulp-svgstore')
-var uglify = require('gulp-uglify')
+var concat = require('gulp-concat');
+var connect = require('gulp-connect');
+var gulp = require('gulp');
+var gutil = require('gulp-util');
+var inject = require('gulp-inject');
+var plumber = require('gulp-plumber');
+var rimraf = require('rimraf');
+var sass = require('gulp-sass');
+var sourcemaps = require('gulp-sourcemaps');
+var svgmin = require('gulp-svgmin');
+var svgstore = require('gulp-svgstore');
+var uglify = require('gulp-uglify');
 
 
 //
@@ -55,7 +55,7 @@ gulp.task('watch', ['server'], function() {
 gulp.task('server', function() {
   connect.server({
     root: './demo',
-    port: 2222,
+    port: 2288,
     livereload: false
   });
 });
@@ -66,8 +66,7 @@ gulp.task('server', function() {
 gulp.task('scripts', function () {
   var svgs = gulp.src(srcDir + '/icons/*.svg')
     .pipe(svgmin())
-    .pipe(svgstore({inlineSvg: true}))
-    // .pipe(gulp.dest(distDir));
+    .pipe(svgstore({inlineSvg: true}));
 
   function fileContents (filePath, file) {
     return file.contents.toString();
@@ -91,8 +90,8 @@ gulp.task('scripts', function () {
       .pipe(inject(svgs, { transform: fileContents }))
       .pipe(isDebug ? gutil.noop() : uglify({mangle: false}))
     .pipe(isDebug ? sourcemaps.write() : gutil.noop())
-    .pipe(gulp.dest(distDir))
-})
+    .pipe(gulp.dest(distDir));
+});
 
 //
 // Stylesheet
@@ -105,5 +104,5 @@ gulp.task('styles', function () {
         outputStyle: isDebug ? 'nested' : 'compressed'
       }))
     .pipe(isDebug ? sourcemaps.write() : gutil.noop())
-    .pipe(gulp.dest(distDir))
-})
+    .pipe(gulp.dest(distDir));
+});
