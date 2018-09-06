@@ -1,99 +1,123 @@
+$gray3: #333;
+$gray4: #444;
+$gray5: #555;
+$gray6: #666;
+$white: #fff;
+$icon-orange: #fb3;
+$icon-blue: #33b5e5;
+$icon-green: #9c0;
+$icon-red: #f44;
+
 //
 // Toolbar
 //
 .darkroom-toolbar {
-  display: block;
-  position: absolute;
-  top: -45px;
-  left: 0;
-  background: #444;
-  height: 40px;
-  min-width: 40px;
-  z-index: 99;
+  background: $gray4;
   border-radius: 2px;
-  white-space: nowrap;
+  display: block;
+  height: 40px;
+  left: 0;
+  min-width: 40px;
   padding: 0 5px;
+  position: absolute;
+  top: -50px;
+  white-space: nowrap;
+  z-index: 99;
 
   // Triangle
-  &:before {
-    content: "";
-    position: absolute;
-    bottom: -7px;
-    left: 20px;
-    width: 0;
-    height: 0;
+  &::before {
     border-left: 7px solid transparent;
     border-right: 7px solid transparent;
-    border-top: 7px solid #444;
-  }
-}
-
-//
-// Button Group
-//
-.darkroom-button-group {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-  // border-right: 1px solid #777;
-
-  &:last-child {
-    border-right: none;
-  }
-}
-
-
-//
-// Button
-//
-.darkroom-button {
-  box-sizing: border-box;
-  background: transparent;
-  border: none;
-  outline: none;
-  padding: 2px 0 0 0;
-  width: 40px;
-  height: 40px;
-
-  &:hover {
-    cursor: pointer;
-    background: #555;
-  }
-  &:active {
-    cursor: pointer;
-    background: #333;
+    border-top: 7px solid $gray4;
+    bottom: -7px;
+    content: '';
+    height: 0;
+    left: 20px;
+    position: absolute;
+    width: 0;
   }
 
-  &:disabled .darkroom-icon {
-    fill: #666;
+
+  //
+  // Button Group
+  //
+  .darkroom-button-group {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    // border-right: 1px solid #777;
+
+    &:last-child {
+      border-right: 0;
+    }
   }
-  &:disabled:hover {
-    cursor: default;
-    /*cursor: not-allowed;*/
+
+
+  //
+  // Button
+  //
+  .darkroom-button {
     background: transparent;
-  }
-  &.darkroom-button-active .darkroom-icon {
-    fill: #33b5e5;
-  }
-  &.darkroom-button-hidden {
-    display: none;
-  }
-  &.darkroom-button-success .darkroom-icon {
-    fill: #99cc00;
-  }
-  &.darkroom-button-warning .darkroom-icon {
-    fill: #FFBB33;
-  }
-  &.darkroom-button-danger .darkroom-icon {
-    fill: #FF4444;
-  }
-}
+    border: 0;
+    box-sizing: border-box;
+    height: 40px;
+    outline: none;
+    padding: 2px 0 0;
+    width: 40px;
 
-//
-// Icon
-//
-.darkroom-icon {
-  width: 24px;
-  height: 24px;
-  fill: #fff;
+    &:hover {
+      background: $gray5;
+      cursor: pointer;
+    }
+
+    &:active {
+      background: $gray3;
+      cursor: pointer;
+    }
+
+    &:disabled {
+      .darkroom-icon {
+        fill: $gray6;
+      }
+
+      &:hover {
+        background: transparent;
+        cursor: default;
+      }
+    }
+
+    .darkroom-icon {
+      fill: $white;
+      height: 24px;
+      width: 24px;
+    }
+
+    &.darkroom-button-active {
+      .darkroom-icon {
+        fill: $icon-blue;
+      }
+    }
+
+    &.darkroom-button-hidden {
+      display: none;
+    }
+
+    &.darkroom-button-success {
+      .darkroom-icon {
+        fill: $icon-green;
+      }
+    }
+
+    &.darkroom-button-warning {
+      .darkroom-icon {
+        fill: $icon-orange;
+      }
+    }
+
+    &.darkroom-button-danger {
+      .darkroom-icon {
+        fill: $icon-red;
+      }
+    }
+  }
 }

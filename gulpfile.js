@@ -76,7 +76,7 @@ gulp.task('scripts', function () {
     srcDir + '/js/core/bootstrap.js',
     srcDir + '/js/core/darkroom.js',
     srcDir + '/js/core/*.js',
-    // srcDir + '/js/plugins/*.js',
+    // srcDir + '/js/plugins/*.js',  // icons are listed in order that plugins are loaded.
     srcDir + '/js/plugins/darkroom.download.js',
     srcDir + '/js/plugins/darkroom.history.js',
     srcDir + '/js/plugins/darkroom.rotate.js',
