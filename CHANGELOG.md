@@ -6,6 +6,13 @@ All notable changes to this project will be documented in this file.
 
 - Add type "button" to avoid html5 submit validation (#24)
 
+## 18.9.6 (2018-09-06)
+
+- Download Plugin
+- Updated node packages
+- Updated fabric to 1.6.7
+- JS and SASS linter fixes
+
 ## 2.0.0 (2015-08-01)
 
 - Use of **Gulp** for the build process

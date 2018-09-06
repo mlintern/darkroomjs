@@ -83,7 +83,7 @@ Run `npm develop` to build and watch the files while developing.
 
 How can I access the edited image?
 
-In order to get the edited image data, you must ask the canvas for it. By doing so inside the callback of your choice (in this case save), you can assign the edited image data to wherever you please. 
+In order to get the edited image data, you must ask the canvas for it. By doing so inside the callback of your choice (in this case save), you can assign the edited image data to wherever you please.
 
 ```javascript
 save: {
@@ -99,4 +99,3 @@ save: {
 
 DarkroomJS is released under the MIT License. See the [bundled LICENSE file](LICENSE)
 for details.
-
