@@ -1,25 +1,20 @@
 # DarkroomJS
 
-![Bower](https://img.shields.io/bower/v/darkroom.svg)
 ![License MIT](http://img.shields.io/badge/license-MIT-blue.svg)
 
 DarkroomJS is a JavaScript library which provides basic image editing tools in
 your browser, such as **rotation** or **cropping**. It is based on the awesome
 [FabricJS](http://fabricjs.com/) library to handle images in HTML5 canvas.
 
-## Demo
-
-Try the online demo at [http://mattketmo.github.io/darkroomjs](http://mattketmo.github.io/darkroomjs/)
-
 ## Building
 
 - Install [Node](http://nodejs.org/) & `npm`.
 - Run `npm install` to build dependencies.
-- Run `npm start` to build the assets and start the demo webserver.
+- Run `npm start` to build the assets and start the demo web server.
 
 ## Usage
 
-Simply instanciate a new Darkroom object with a reference to the image element:
+Simply instantiate a new Darkroom object with a reference to the image element:
 
 ```html
 <img src="some-image.jpg" id="target">
@@ -73,7 +68,7 @@ the target image to a canvas with a FabricJS instance, and creates an empty tool
 All the features are then implemented in separate plugins.
 
 Each plugin is responsible for creating its own functionality.
-Buttons can easily be added to the toolbar and binded with those features.
+Buttons can easily be added to the toolbar and bound with those features.
 
 ## Contributing
 
@@ -87,12 +82,12 @@ In order to get the edited image data, you must ask the canvas for it. By doing 
 
 ```javascript
 save: {
-      callback: function() {
-          this.darkroom.selfDestroy(); // Cleanup
-          var newImage = dkrm.canvas.toDataURL();
-          fileStorageLocation = newImage;
-      }
+  callback: function() {
+    this.darkroom.selfDestroy(); // Cleanup
+    var newImage = dkrm.canvas.toDataURL();
+    fileStorageLocation = newImage;
   }
+}
 ```
 
 ## License
