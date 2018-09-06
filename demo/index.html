@@ -126,11 +126,13 @@
     </div>
   </div>
 
+  <script src="./vendor/jquery.min.js"></script>
   <script src="./vendor/fabric.min.js"></script>
   <script src="./build/darkroom.js"></script>
 
   <script>
-    var dkrm = new Darkroom('#target', {
+  function initDarkroom(target) {
+    var dkrm = new Darkroom(target, {
       // Size options
       minWidth: 100,
       minHeight: 100,
@@ -155,6 +157,12 @@
         cropPlugin.requireFocus();
       }
     });
+  }
+  $(document).ready(function () {
+    $('img').click(function () {
+      initDarkroom($(this));
+    })
+  });
   </script>
 </body>
 </html>

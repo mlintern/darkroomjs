@@ -11,6 +11,10 @@ a {
   text-decoration: none;
 }
 
+img {
+  cursor: pointer;
+}
+
 .figure-wrapper {
   text-align: center;
 }
