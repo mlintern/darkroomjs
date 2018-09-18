@@ -30,7 +30,7 @@
         <p class="intro">
           <strong>DarkroomJS</strong> is a JavaScript library which provides basic
           image editing tools in your browser, such as <strong>rotation</strong> or <strong>cropping</strong>.
-          It is based on the awesome <a href="http://fabricjs.com/">FabricJS</a> library to handle images in HTML5 canvas.
+          It is based on the awesome <a href="http://fabricjs.com/">FabricJS</a> (1.6.7) library to handle images in HTML5 canvas.
         </p>
 
         <div class="figure-wrapper">
@@ -143,15 +143,6 @@
           // minHeight: 50,
           // minWidth: 50,
           //ratio: 4/3
-        },
-        save: {
-          callback: function () {
-            this.darkroom.selfDestroy(); // Cleanup
-            $('.darkroom-edited-image').click(function () {
-              console.log('here');
-              initDarkroom($(this));
-            });
-          }
         }
       },
 
@@ -163,10 +154,8 @@
       }
     });
   }
-  $(document).ready(function () {
-    $('img').click(function () {
-      initDarkroom($(this));
-    });
+  $(document).on('click', 'img', function () {
+    initDarkroom($(this));
   });
   </script>
 </body>

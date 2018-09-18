@@ -1,7 +1,7 @@
 {
   "name": "darkroom",
   "description": "Extensible image editing tool via HTML canvas",
-  "version": "18.9.6",
+  "version": "18.9.17",
   "homepage": "http://mattketmo.github.io/darkroomjs/",
   "authors": [
     "Matthieu Moquet <matthieu@moquet.net>"

@@ -6,6 +6,11 @@ All notable changes to this project will be documented in this file.
 
 - Add type "button" to avoid html5 submit validation (#24)
 
+## 18.9.17 (2018-09-06)
+
+- Javascript Listener Update
+- update 'gulp-svgmin'
+
 ## 18.9.6 (2018-09-06)
 
 - Download Plugin

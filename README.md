@@ -11,6 +11,8 @@ your browser, such as **rotation** or **cropping**. It is based on the awesome
 - Install [Node](http://nodejs.org/) & `npm`.
 - Run `npm install` to build dependencies.
 - Run `npm start` to build the assets and start the demo web server.
+- Run `npm run develop` to build the assets and start the demo web server while watching for changes.
+- Run `npm run build` to build the production assets.
 
 ## Usage
 
